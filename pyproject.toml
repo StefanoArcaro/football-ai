@@ -5,13 +5,16 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi>=0.115.12",
     "gdown>=5.2.0",
     "ipykernel>=6.29.5",
     "ipywidgets>=8.1.7",
     "more-itertools>=10.7.0",
     "notebook>=7.4.3",
+    "opencv-python>=4.11.0.86",
     "protobuf>=6.31.1",
     "python-dotenv>=1.1.0",
+    "python-multipart>=0.0.20",
     "roboflow>=1.1.66",
     "scikit-learn>=1.7.0",
     "sentencepiece>=0.2.0",
@@ -20,4 +23,5 @@ dependencies = [
     "transformers>=4.52.4",
     "ultralytics>=8.3.151",
     "umap-learn>=0.5.7",
+    "uvicorn>=0.34.3",
 ]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Football Video Analysis</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    #status { margin-top: 1em; font-style: italic; }
+    #result-video { margin-top: 1em; max-width: 100%; display: none; }
+  </style>
+</head>
+<body>
+  <h1>⚽ Upload & View Analyzed Video</h1>
+
+  <form id="upload-form" enctype="multipart/form-data">
+    <input id="video-input" type="file" name="video" accept="video/*" required />
+    <button type="submit">Upload & Analyze</button>
+  </form>
+
+  <div id="status">No upload yet.</div>
+
+  <video id="result-video" controls>
+    <!-- we’ll set src dynamically in JS -->
+    Your browser does not support the video tag.
+  </video>
+
+  <script src="script.js"></script>
+</body>
+</html>
