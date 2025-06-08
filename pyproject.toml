@@ -4,4 +4,20 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "gdown>=5.2.0",
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.7",
+    "more-itertools>=10.7.0",
+    "notebook>=7.4.3",
+    "protobuf>=6.31.1",
+    "python-dotenv>=1.1.0",
+    "roboflow>=1.1.66",
+    "scikit-learn>=1.7.0",
+    "sentencepiece>=0.2.0",
+    "supervision>=0.25.1",
+    "torch>=2.7.1",
+    "transformers>=4.52.4",
+    "ultralytics>=8.3.151",
+    "umap-learn>=0.5.7",
+]
