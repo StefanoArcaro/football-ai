@@ -12,7 +12,7 @@ BALL_ID = 0
 
 
 def run_detection_pipeline(source_video_path: str, output_video_path: str):
-    model_path = "models/best.pt"
+    model_path = "models/football-player-detection.pt"
     model = YOLO(model_path)
 
     # Load model to device and convert to half precision for performance
