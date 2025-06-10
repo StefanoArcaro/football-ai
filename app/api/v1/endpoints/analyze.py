@@ -6,31 +6,12 @@ from fastapi import APIRouter, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 
 from app.processing.video_pipeline import run_detection_pipeline
+from app.utils.utils import reencode_for_web
 
 router = APIRouter()
 UPLOAD_PATH = "videos/input.mp4"
 RAW_OUTPUT_PATH = "videos/analyzed_raw.mp4"
 FINAL_OUTPUT_PATH = "videos/analyzed.mp4"
-
-
-def reencode_for_web(input_mp4: str, output_mp4: str):
-    """Re-encode video to baseline H.264 with moov atom at start for web compatibility."""
-    cmd = [
-        "ffmpeg",
-        "-y",
-        "-i",
-        input_mp4,
-        "-c:v",
-        "libx264",
-        "-profile:v",
-        "baseline",
-        "-level",
-        "3.0",
-        "-movflags",
-        "+faststart",
-        output_mp4,
-    ]
-    subprocess.run(cmd, check=True)
 
 
 os.makedirs("videos", exist_ok=True)
